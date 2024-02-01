@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+        <p>
+        @foreach (var i in Model.Films)
+        {
+                <div style="font-size: 18px;">
+                        <a href="/films/@i.Id">@i.Name</a>
+                    @i
+                    </div>
+        }
+    </p>
+</div>
