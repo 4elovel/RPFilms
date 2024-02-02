@@ -1,0 +1,70 @@
+﻿@page "/films/search"
+@model RPFilms.Pages.films.ChangeModel
+@{
+    ViewData["Title"] = "Search";
+}
+<H1>Edit Film</H1>
+    <form method="post">
+        Input id of film to change<br>
+        <input type="text" name="id" /><br>
+        New Name<br>
+        <input type="text" name="name" /><br>
+        New Regisseur<br>
+        <input type="text" name="regisseur" /><br>
+        New Style<br>
+        <input type="text" name="style" /><br>
+        New Description<br>
+        <input type="text" name="description" /><br>
+        New Seances:<br /> 12/25/2024 10:30:00,12/25/2024 11:50:00,1:20;<br /> 09/25/2024 10:30:00,09/25/2024 11:50:00,1:20<br>
+        <textarea name="seances" cols="30" rows="10"></textarea><br />
+        <input type="submit" value="send" />
+    </form>
+
+
+
+
+
+@* 
+    @page "/films/delete"
+@model RPFilms.Pages.films.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Film Delete</h4>
+
+    <form method="post">
+        Write id of element <strong style="color: red;">to delete</strong>
+<input type="text" name="id"><br>
+<input type="submit" value="send"><br>
+    </form>
+    
+</div>
+
+ *@
+
+@*         using Entities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace RPFilms.Pages.films
+{
+    public class DeleteModel : PageModel
+    {
+        private readonly DataAccess.AppDbContext _context;
+
+        public DeleteModel(DataAccess.AppDbContext context)
+        {
+            _context = context;
+        }
+
+        [BindProperty]
+        public Film Film { get; set; } = default!;
+
+    }
+} *@

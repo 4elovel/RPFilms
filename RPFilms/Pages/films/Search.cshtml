@@ -1,0 +1,31 @@
+﻿@page "/films/search"
+@model RPFilms.Pages.films.SearchModel
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search</h1>
+
+<form method="post">
+        <br>Input search element<br>
+        <input type="text" name="search-element" />
+        <input type="submit" value="send" />
+</form>
+@if (Model.HttpContext.Request.Method == "POST" && Model.Films is not null)
+{
+    if (Model.Films.Count != 0)
+    {
+        @foreach (var i in Model.Films)
+        {
+            <p> @i.ToString()
+            </p>
+        }
+
+    }
+    else
+    {
+                        <p><br> <br>No Such Element ):
+                    </p>
+    }
+}
